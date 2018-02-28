@@ -24,11 +24,9 @@ public class ArrayStorage {
 
     Resume get(String uuid) {
         Resume result = null;
-        Resume localResume;
         for (int i = 0; i < size; i++) {
-            localResume = storage[i];
-            if (localResume != null && uuid.equals(localResume.uuid)) {
-                result = localResume;
+            if (storage[i] != null && uuid.equals(storage[i].uuid)) {
+                result = storage[i];
                 break;
             }
         }
